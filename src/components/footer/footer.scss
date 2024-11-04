@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.footer{
+    padding: 1rem;
+    margin-top: 1rem;
+    color: $colour-neutral;
+    background-color: $colour-primary-dark;
+
+    .footerContent {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 1rem;
+        max-width: $max-width-wrapper;
+        margin: 0 auto;
+    }
+}
+
+img {
+    width: 24px;
+    height: 24px;
+}

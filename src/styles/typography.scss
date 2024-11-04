@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Barriecito';
+    src: url('/fonts/Barriecito-Regular.ttf');
+    font-weight: 400; 
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-VariableFont_wdth,wght.ttf');
+    font-weight: 300 800;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Barriecito", Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
