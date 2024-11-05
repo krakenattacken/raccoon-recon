@@ -8,7 +8,7 @@ import SubmissionForm from './components/submissions/submissions';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/raccoon-recon">
       <div className='App'>
         <Navbar />
         <main>

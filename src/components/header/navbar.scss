@@ -3,53 +3,85 @@
 $header-height: 50px;
 
 .navbar {
-    position: sticky;
-    top: 0px;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
 
-    padding: 10px;
-    height: $header-height;
-    background-color: $colour-neutral;
+  padding: 10px;
+  height: $header-height;
+  background-color: $colour-neutral;
 
-    .navbarContent {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+  .navbarContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-        max-width: $max-width-wrapper;
-        max-height: 100%;
-        margin: 0 auto;
-    }
+    max-width: $full-width-wrapper;
+    max-height: 100%;
+    margin: 0 auto;
+
+    font-family: Barriecito, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;        
+    font-size: 22px;
+  }
+
+  .logo {
+    text-decoration: underline wavy $colour-primary 2px;
+    color: $colour-dark;
+  }
+
+
+  
 }
 
 .mainNav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 
-    ul, a {
-        display: flex;
-        align-items: center;
-    }
+  a {
+    color: $colour-dark;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 1px;
+  }
 
-    
+  a:hover, a:focus {
+    background-color: $colour-primary;
+  }
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-      display: none; /* Hide navigation on smaller screens */
+.hamburgerToggle {
+  display: none;
+}
+
+@media (max-width: $full-width-wrapper) {
+  $nav-width: 200px;
+    .mainNav {
+      display: none; 
       flex-direction: column;
       position: absolute;
-      top: 60px;
+      top: $header-height;
       right: 0;
-      width: 100%;
+      width: $nav-width;
       padding: 1rem 0;
+      background-color: $colour-neutral;
     }
   
-    .nav-links.open {
-      display: flex; /* Show dropdown when open */
+    .mainNav.open {
+      display: flex; 
     }
   
-    .hamburger {
-      display: flex; /* Show hamburger icon on smaller screens */
+    .hamburgerToggle {
+      display: flex; 
+      max-height: 100%;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
     }
   }

@@ -11,16 +11,20 @@ function Navbar() {
     }
 
     return (
-        <header>
-            <div className="header">
-                <a href="/" className="nav-brand">Trash Panda TO</a>
+        <header className="navbar">
+            <div className="navbarContent">
+                <div>
+                    <a href="/" className="logo">raccoon recon</a>
+                </div>
+                <button className="hamburgerToggle" onClick={toggleMenu}>
+                    <img src="/hamburger-menu.svg" alt="Menu"/>
+                </button>
+                <nav className={`mainNav ${isOpen ? 'open' : ''}`}>
+                    <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+                    <Link to="/submissions" onClick={() => setIsOpen(false)}>Submit</Link>
+                    <Link to="/dashboard" onClick={() => setIsOpen(false)}>Dashboard</Link>
+                </nav>
             </div>
-            <button className="hamburger" onClick={toggleMenu}></button>
-            <nav className={`nav-links ${isOpen ? 'open' : ''}`}>
-                <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-                <Link to="/submit" onClick={() => setIsOpen(false)}>Submit</Link>
-                <Link to="/dashboard" onClick={() => setIsOpen(false)}>Dashboard</Link>
-            </nav>
         </header>
         
     )

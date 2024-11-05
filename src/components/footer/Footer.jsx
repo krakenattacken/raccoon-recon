@@ -7,7 +7,7 @@ function Footer() {
         <footer className="footer">
             <div className="footerContent">
                 <div>
-                    <div>
+                    <div className="logos">
                         <a aria-label="github" href="github.com/krakenattacken">
                             <img src="github.svg" alt="Github logo"/>
                         </a>
