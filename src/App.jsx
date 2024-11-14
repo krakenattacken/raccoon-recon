@@ -4,11 +4,12 @@ import Navbar from './components/header/Navbar';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
 import Dashboard from './components/dashboard/Dashboard'
-import SubmissionForm from './components/submissions/submissions';
+import SubmissionForm from './components/submissions/SubmissionForm/Submissions';
+import Behaviour from './components/submissions/behaviour/Behaviour';
 
 function App() {
   return (
-    <Router basename="/raccoon-recon">
+    <Router>
       <div className='App'>
         <Navbar />
         <main>
