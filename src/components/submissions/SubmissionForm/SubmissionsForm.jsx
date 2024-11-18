@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Time from '../time/Time';
-import CheckboxButtons from '../form-button/CheckboxButtons';
+import CheckboxButtons from '../checkbox-buttons/CheckboxButtons';
 import Location from '../location/Location';
 import Summary from '../summary/Summary';
 import './submissions-form.scss';
