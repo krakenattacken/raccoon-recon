@@ -1,0 +1,36 @@
+@import '../../../styles/variables.scss';
+
+
+.checkboxContainer {
+    display: flex;
+    padding: .75rem;
+    margin: 1rem .5rem;
+    border: solid 3px $colour-primary-dark;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(.23, 1, 0.32, 1);
+    background-color: $colour-whiter;
+
+    label {
+        display: flex;
+        font-size: 16px;
+    }
+
+    &:hover {
+        box-shadow: 0 3px 2px $colour-primary-dark;
+    }
+
+    &.checked {
+        background: $colour-primary;
+        border: solid 3px $colour-primary-dark;
+    }
+}
+
+.checkboxInput {
+    display: none;
+}
+
+.checkboxContent {
+    font-weight: 800;
+    font-size: 16px;
+}

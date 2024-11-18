@@ -1,0 +1,16 @@
+@import '../../../styles/variables.scss';
+
+.formContainer {
+    margin: 0 auto;
+    justify-content: center;
+    max-width: $max-width-wrapper;
+}
+
+.submissionForm {
+    margin: 2rem 0;
+}
+.next {
+    justify-content: center;
+    display: flex;
+
+}

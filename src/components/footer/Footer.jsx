@@ -12,7 +12,7 @@ function Footer() {
                             <img src="github.svg" alt="Github logo"/>
                         </a>
                     </div>
-                    <p>&copy; Laurence Jang 2024</p>
+                    <p>&copy; Raccoon Recon 2024</p>
                 </div>
             </div>
         </footer>

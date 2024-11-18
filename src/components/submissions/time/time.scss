@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+input[type="datetime-local"] {
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    border: solid 3px $colour-primary-dark;
+    border-radius: 15px;
+    background-color: $colour-whiter;
+    margin: 1rem .5rem;
+}

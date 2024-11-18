@@ -14,7 +14,7 @@ function Navbar() {
         <header className="navbar">
             <div className="navbarContent">
                 <div>
-                    <a href="/" className="logo">raccoon recon</a>
+                    <Link to="/" onClick={() => setIsOpen(false)} className="logo">RACCOON RECON</Link>
                 </div>
                 <button className="hamburgerToggle" onClick={toggleMenu}>
                     <img src="/hamburger-menu.svg" alt="Menu"/>

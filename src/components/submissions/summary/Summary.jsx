@@ -1,24 +1,31 @@
 import React from "react";
 
-const Summary = ({ data, prevStep }) => {
+const Summary = ({ data, prevStep, onSubmit }) => {
+    const formattedData = {
+        behaviour: Object.keys(data.behaviour).filter((key) => data.behaviour[key]),
+        condition: Object.keys(data.condition).filter((key) => data.condition[key]),
+    };
+
     return (
-        <div>
+        <div >
             <h2>Summary</h2>
-            <p>
-                <strong>Location:</strong> {submission.location.latitude.toString()},
+            {/* <p>
+                <strong>Location:</strong> {data.location.latitude.toString()},
                 {submission.location.longitude.toString()}
+            </p> */}
+            <p>
+                <strong>Time:</strong> {data.time}
             </p>
             <p>
-                <strong>Behaviour:</strong> {submission.behaviours.join(', ')}
+                <strong>Behaviour:</strong> {formattedData.behaviour.join(', ')}
             </p>
             <p>
-                <strong>Condition:</strong> {submission.conditions.join(', ')}
+                <strong>Condition:</strong> {formattedData.condition.join(', ')}
             </p>
-            <p>
-                <strong>Time:</strong> {new Date(submission.sightingTime.toDateString())}
-            </p>
-            <button role="button" onClick={prevStep}>Back</button>
-            <button role="button" onClick={() => alert('Form submitted. Thanks!')}>Submit</button>
+            <div className="buttonGroup">
+                <button role="button" onClick={prevStep}>Back</button>
+                <button role="Submit" onClick={onSubmit}>Submit</button>
+            </div>
         </div>
     )
 }

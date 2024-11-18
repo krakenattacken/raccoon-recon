@@ -4,8 +4,9 @@ import Navbar from './components/header/Navbar';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
 import Dashboard from './components/dashboard/Dashboard'
-import SubmissionForm from './components/submissions/SubmissionForm/Submissions';
-import Behaviour from './components/submissions/behaviour/Behaviour';
+import SubmissionForm from './components/submissions/SubmissionForm/SubmissionsForm';
+import 'leaflet/dist/leaflet.css';
+
 
 function App() {
   return (
@@ -24,5 +25,4 @@ function App() {
     </Router>
   )
 }
-
 export default App;

@@ -2,7 +2,6 @@
 
 .footer{
     padding: 1rem;
-    margin-top: 1rem;
     color: $colour-neutral;
     background-color: $colour-primary-dark;
 
@@ -17,10 +16,10 @@
     .logos {
         display: flex;
         justify-content: center;
+        
+        img {
+            width: 24px;
+            height: 24px;
+        }
     }
-}
-
-img {
-    width: 24px;
-    height: 24px;
 }

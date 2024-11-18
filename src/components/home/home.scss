@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+ }
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+    .heroImage {
+        height: auto;
+        width: auto;
+    }
+}
+
+.buttonGroup {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+    font-weight: 800;
+}
+
+.sectionTitle {
+    text-align: center;
+}
+
+.about {
+    $lighter-primary: hsl(93, 62%, 81%);
+    padding: 2rem 0;
+    background-color: $lighter-primary;
+    width: 100%;
+
+    .wrapper {
+        max-width: $full-width-wrapper;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    p {
+        padding-top: 1rem;
+    }
+}
+
