@@ -3,6 +3,7 @@ import Time from '../time/Time';
 import CheckboxButtons from '../checkbox-buttons/CheckboxButtons';
 import LocationPicker from '../location/LocationPicker';
 import Summary from '../summary/Summary';
+import SubmitThanks from '../submit-thanks/SubmitThanks';
 import './submissions-form.scss';
 
 const SubmissionForm = () => {
@@ -21,18 +22,37 @@ const SubmissionForm = () => {
     }));
   };
 
+  const [formErrors, setFormErrors] = useState('');
+  
+  const validateForm = () => {      
+    if (!formData.location || !formData.time || 
+      !Object.values(formData.behaviour).some(Boolean) || 
+      !Object.values(formData.condition).some(Boolean)) 
+    {  
+      setFormErrors("You didn't complete the form!");
+      return false;
+    }
+    setFormErrors('');
+    return true;
+  };
+
   const handleSubmit = () => {
-    const formattedData = {
-      ...formData,
-      behaviour: Object.keys(formData.behaviour).filter((key) => formData.behaviour[key]),
-      condition: Object.keys(formData.condition).filter((key) => formData.condition[key]),
-    };
-    console.log("Submitted", JSON.stringify(formattedData, null, 2));
+    if (validateForm()) {
+      const formattedData = {
+        ...formData,
+        behaviour: Object.keys(formData.behaviour).filter((key) => formData.behaviour[key]),
+        condition: Object.keys(formData.condition).filter((key) => formData.condition[key]),
+      };
+      console.log("Submitted", JSON.stringify(formattedData, null, 2));
+      setStep(3);
+    }
   };
 
   const nextStep = () => {
-    console.log("Moving to the next step");
-    setStep((prev) => prev + 1);
+    if (validateForm()) {
+      console.log("Moving to the next step");
+      setStep((prev) => prev + 1);
+    }
   };
 
   const prevStep = () => {
@@ -78,16 +98,23 @@ const SubmissionForm = () => {
           <div className="buttonGroup">
             <button type="button" onClick={nextStep}>Next</button>
           </div>
+          {formErrors && <p className='error'>{formErrors}</p>}
         </div>
       )}
       
       {step === 2 && (
-        <div className="formContainer">
+        <div className="submissionForm">
           <Summary
             data={formData}
             prevStep={prevStep}
             onSubmit={handleSubmit}
           />
+        </div>
+      )}
+
+      {step === 3 && (
+        <div className='submissionForm'>
+          <SubmitThanks />
         </div>
       )}
     </div>

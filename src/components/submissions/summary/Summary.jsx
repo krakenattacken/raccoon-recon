@@ -21,7 +21,6 @@ const Summary = ({ data, prevStep, onSubmit }) => {
         return date.toLocaleString("en-US", formatting);
     }
 
-
     return (
         <div className="summary">
             <h2>Summary</h2>
