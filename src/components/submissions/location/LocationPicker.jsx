@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 
-function Location({ location, onChange }) {
-    //const [markerPosition, setMarkerPosition] = useState([location.lat, location.lng]);
+function LocationPicker({ location, onChange }) {
+    const [markerPosition, setMarkerPosition] = useState([43.642556, -79.387083]); //cn tower
 
     const MapClickHandler = () => {
         useMapEvents({
             click(e) {
-              const { lat, lng } = e.latlng;
-              onChange([lat, lng]); 
+                const { lat,lng } = e.latlng;
+                setMarkerPosition([lat, lng]);
+                if (onChange) {
+                    onChange([lat, lng]);
+                } 
             },
-          });
-          return location && location.lat && location.lng ? (
-            <Marker position={[value.lat, value.lng]} />
-          ) : null;
+        });
+        return null;
     };
 
     return (
@@ -24,21 +24,22 @@ function Location({ location, onChange }) {
             <h2>Where did you see the raccoon?</h2>
             <h3>Please pin the location below.</h3>
 
-            <section role="application" style={{ height: '400px' }}>
+            <section role="application" style={{ height: '400px', width: "100%"}}>
                 <MapContainer
-                    center={markerPosition || [43.65107, -79.347015]}
-                    zoom={10}
+                    center={markerPosition}
+                    zoom={11}
                     style={{ height: '400px', width: '100%' }}
                 >
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        attribution="&copy; OpenStreetMap contributors"
+                        attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
                     />
-                    <MapClickHandler />
+                    <MapClickHandler /> 
+                    <Marker position={markerPosition} />
                 </MapContainer>
             </section>
         </div>
     );
 }
 
-export default Location;
+export default LocationPicker;

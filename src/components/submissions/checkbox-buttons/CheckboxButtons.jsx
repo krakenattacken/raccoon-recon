@@ -19,6 +19,7 @@ const CheckboxButtons = ({ groupName, options, selectedValues, onChange }) => {
     return (
         <div>
             <h2>{groupName}</h2>
+            <h3>Select at least one</h3>
             {options.map(([key, description]) => (
                 <label key={key} className={`checkboxContainer ${checkedItems[key] ? "checked" : ""}`}>
                     <input

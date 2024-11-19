@@ -8,7 +8,7 @@ function Footer() {
             <div className="footerContent">
                 <div>
                     <div className="logos">
-                        <a aria-label="github" href="github.com/krakenattacken">
+                        <a aria-label="github" href="https://www.github.com/krakenattacken" target="_blank" rel="noopener noreferrer">
                             <img src="github.svg" alt="Github logo"/>
                         </a>
                     </div>

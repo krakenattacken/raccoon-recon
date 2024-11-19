@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Time from '../time/Time';
 import CheckboxButtons from '../checkbox-buttons/CheckboxButtons';
-import Location from '../location/Location';
+import LocationPicker from '../location/LocationPicker';
 import Summary from '../summary/Summary';
 import './submissions-form.scss';
 
@@ -45,21 +45,20 @@ const SubmissionForm = () => {
       {step === 1 && (
         <div className='submissionForm'>
           <h2>This is a submission form.</h2>
-          {/* <Location
+          <LocationPicker
             value={formData.location}
             onChange={(value) => updateFormData("location", value)}
-          />  */}
+          /> 
           <Time
             value={formData.time}
             onChange={(value) => updateFormData("time", value)}
           />
-          <h3>Please select at least one option from each of the following sections</h3>
           <CheckboxButtons
             groupName="What was the raccoon's behaviour like?"
             options={[
               ["aggressive", "Aggressive (e.g., growling, hissing, showing teeth)"],
               ["playful", "Playful (e.g. running around)"],
-              ["foraging", "Foraging (e.g. digging through trash, searching for food))"],
+              ["foraging", "Foraging (e.g. digging through trash, searching for food)"],
               ["resting", "Resting (e.g. sitting, lying down)"]
             ]}
             selectedValues={formData.behaviour}
@@ -76,7 +75,9 @@ const SubmissionForm = () => {
             selectedValues={formData.condition}
             onChange={(value) => updateFormData("condition", value)}
           />
-          <button type="button" onClick={nextStep}>Next</button>
+          <div className="buttonGroup">
+            <button type="button" onClick={nextStep}>Next</button>
+          </div>
         </div>
       )}
       

@@ -7,11 +7,10 @@ import Dashboard from './components/dashboard/Dashboard'
 import SubmissionForm from './components/submissions/SubmissionForm/SubmissionsForm';
 import 'leaflet/dist/leaflet.css';
 
-
 function App() {
   return (
     <Router>
-      <div className='App'>
+      <div>
         <Navbar />
         <main>
           <Routes>
