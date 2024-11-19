@@ -10,7 +10,7 @@ const SubmissionForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     time: null,
-    location: null,
+    location: [43.642556, -79.387083], //cn tower as default.
     behaviour: {},
     condition: {},
   });
@@ -66,7 +66,7 @@ const SubmissionForm = () => {
         <div className='submissionForm'>
           <h2>This is a submission form.</h2>
           <LocationPicker
-            value={formData.location}
+            location={formData.location}
             onChange={(value) => updateFormData("location", value)}
           /> 
           <Time

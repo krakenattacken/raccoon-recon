@@ -4,7 +4,7 @@ import 'leaflet-defaulticon-compatibility';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 
 function LocationPicker({ location, onChange }) {
-    const [markerPosition, setMarkerPosition] = useState([43.642556, -79.387083]); //cn tower
+    const [markerPosition, setMarkerPosition] = useState(location); //cn tower
 
     const MapClickHandler = () => {
         useMapEvents({
@@ -27,7 +27,7 @@ function LocationPicker({ location, onChange }) {
             <section role="application" style={{ height: '400px', width: "100%"}}>
                 <MapContainer
                     center={markerPosition}
-                    zoom={11}
+                    zoom={13}
                     style={{ height: '400px', width: '100%' }}
                 >
                     <TileLayer

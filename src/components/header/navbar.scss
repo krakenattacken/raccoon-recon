@@ -75,16 +75,16 @@ $header-height: 50px;
 }
 
 @media (max-width: $full-width-wrapper) {
-  $nav-width: 200px;
     .mainNav {
       display: none; 
       flex-direction: column;
       position: absolute;
       top: $header-height;
       right: 0;
-      width: $nav-width;
+      width: auto;
       padding: 1rem 0;
       background-color: $colour-neutral;
+      margin: 0 1rem;
     }
   
     .mainNav.open {
