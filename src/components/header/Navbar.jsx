@@ -40,7 +40,7 @@ function Navbar() {
                     <Link to="/" onClick={() => setIsOpen(false)} className="logo">RACCOON RECON</Link>
                 </div>
                 <button ref={menuButtonRef} className="hamburgerToggle" onClick={toggleMenu}>
-                    <img src="/hamburger-menu.svg" alt="Menu"/>
+                    <img src="hamburger-menu.svg" alt="Menu"/>
                 </button>
                 <nav ref={navRef} className={`mainNav ${isOpen ? 'open' : ''}`}>
                     <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ref, push } from 'firebase/database';
+import database from '../../../firebase';
 import Time from '../time/Time';
 import CheckboxButtons from '../checkbox-buttons/CheckboxButtons';
 import LocationPicker from '../location/LocationPicker';
@@ -42,9 +44,19 @@ const SubmissionForm = () => {
         ...formData,
         behaviour: Object.keys(formData.behaviour).filter((key) => formData.behaviour[key]),
         condition: Object.keys(formData.condition).filter((key) => formData.condition[key]),
+        timestamp: Date.now(),
       };
-      console.log("Submitted", JSON.stringify(formattedData, null, 2));
-      setStep(3);
+
+      const submissionsRef = ref(database, "submissions");
+      push(submissionsRef, formattedData)
+        .then(() => {
+          console.log("Submitted");
+          setStep(3);
+        })
+        .catch((error) => {
+          console.error("Error saving data", error);
+          setFormErrors("Failed to save data. Please try again.");
+        });
     }
   };
 

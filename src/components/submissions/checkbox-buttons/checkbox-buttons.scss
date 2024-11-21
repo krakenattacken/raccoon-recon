@@ -5,11 +5,11 @@
     display: flex;
     padding: .75rem;
     margin: 1rem .5rem;
-    border: solid 3px $colour-primary-dark;
+    border: solid 3px $colour-primary-700;
     border-radius: 15px;
     cursor: pointer;
     transition: all 200ms cubic-bezier(.23, 1, 0.32, 1);
-    background-color: $colour-whiter;
+    background-color: $colour-grey-100;
 
     label {
         display: flex;
@@ -17,12 +17,12 @@
     }
 
     &:hover {
-        box-shadow: 0 3px 2px $colour-primary-dark;
+        box-shadow: 0 3px 2px $colour-primary-700;
     }
 
     &.checked {
-        background: $colour-primary;
-        border: solid 3px $colour-primary-dark;
+        background: $colour-primary-500;
+        border: solid 3px $colour-primary-700;
     }
 }
 

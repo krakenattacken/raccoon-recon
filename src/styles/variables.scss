@@ -1,10 +1,13 @@
-$colour-primary: hsl(68 100% 37.3%);
-$colour-primary-dark: hsl(89 46.5% 39.6%);
-$colour-neutral: hsl(134 60% 95.1%);
-$colour-grey: hsl(127, 4%, 55%);
-$colour-grey-dark: hsl(130, 4%, 31%);
-$colour-dark: hsl(130 26.1% 9%);
-$colour-whiter: hsl(134 60% 99%);
+$colour-primary-100: #E9F7DE;
+$colour-primary-300: #D4EFBD;
+$colour-primary-500: hsl(84 95% 37.3%);
+$colour-primary-700: hsl(93, 62%, 34%);
+$colour-primary-900: hsl(159, 53%, 28%);
+
+$colour-grey-900: hsl(130 26.1% 9%);
+$colour-grey-600: hsl(130, 4%, 31%);
+$colour-grey-200: hsl(134 60% 95.1%);
+$colour-grey-100: hsl(134 60% 99%);
 
 $font-titles: "FreckleFace", system-ui;
 $font-body: "Open Sans", sans-serif;

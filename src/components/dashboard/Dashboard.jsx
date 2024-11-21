@@ -1,10 +1,11 @@
 import React from "react";
+import DashboardMap from "./DashboardMap";
+import Sidebar from "./Sidebar";
 
 function Dashboard() {
+
     return (
-        <div className="pageContainer">
-            <h1>Dashboard Stuff</h1>
-        </div>
+        <DashboardMap/>
     )
 }
 

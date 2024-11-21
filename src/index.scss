@@ -45,8 +45,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   font-weight: 400;
 
-  color: $colour-dark;
-  background-color: $colour-neutral;
+  color: $colour-grey-900;
+  background-color: $colour-grey-100;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -66,16 +66,21 @@ h3 {
   font-size: 1.5rem;
 }
 
-p {
+p, li {
   font-size: 16px;
 }
 
+a {
+  color: $colour-primary-900;
+  text-decoration: solid underline $colour-primary-500;
+}
+
 button {
-  background: $colour-primary;
-  color: $colour-neutral;
+  background: $colour-primary-500;
+  color: $colour-grey-100;
   border-radius: 15px;
   padding: .75rem;
-  box-shadow: 0 5px 1px $colour-primary-dark;
+  box-shadow: 0 5px 1px $colour-primary-700;
   cursor: pointer;
   transition: all 200ms cubic-bezier(.23, 1, 0.32, 1);
   border: none;
@@ -94,7 +99,7 @@ button:hover {
   margin: 1rem;
 }
 
-html, body {
+html, body, .pageContainer {
   height: 100%;
 }
 
