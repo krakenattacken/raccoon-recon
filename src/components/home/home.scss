@@ -1,10 +1,13 @@
 @import '../../styles/variables.scss';
 
-
 .home {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+    a:hover {
+        color: $colour-primary-500;
+    }
  }
 
 .hero {
@@ -14,7 +17,7 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    margin-top: 1rem;
+    padding-top: 1rem;
     
     .heroImage {
         height: auto;
@@ -41,11 +44,14 @@
     }
 }
 
-.about {
-    background-color: $colour-primary-300;
-}
-
-.issue {
+.bg-green-100 {
     background-color: $colour-primary-100;
 }
 
+.bg-green-200 {
+    background-color: $colour-primary-200;
+}
+
+.bg-green-300 {
+    background-color: $colour-primary-300;
+}

@@ -72,7 +72,7 @@ p, li {
 
 a {
   color: $colour-primary-900;
-  text-decoration: solid underline $colour-primary-500;
+  text-decoration: 2px solid underline $colour-primary-500;
 }
 
 button {
@@ -84,6 +84,7 @@ button {
   cursor: pointer;
   transition: all 200ms cubic-bezier(.23, 1, 0.32, 1);
   border: none;
+  font-size: 16px;
   font-weight: 800;
 }
 

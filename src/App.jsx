@@ -4,7 +4,7 @@ import Navbar from './components/header/Navbar';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
 import Dashboard from './components/dashboard/Dashboard'
-import SubmissionForm from './components/submissions/SubmissionForm/SubmissionsForm';
+import SubmissionForm from './components/submissions/submission-form/SubmissionsForm';
 import 'leaflet/dist/leaflet.css';
 
 function App() {

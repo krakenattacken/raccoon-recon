@@ -21,7 +21,7 @@ function Home() {
                 </div>
                 <img className="heroImage" src="images/landing_hero.png"/>
             </section>
-            <section className="sectionContainer about">
+            <section className="sectionContainer about bg-green-300">
                 <div className="wrapper">
                     <h2 className="sectionTitle">About Raccoon Recon</h2>
                     <p>
@@ -35,7 +35,7 @@ function Home() {
                     </p>
                 </div>
             </section>
-            <section className="sectionContainer">
+            <section className="sectionContainer bg-green-200">
                 <div className="wrapper">
                     <h2 className="sectionTitle">Raccoon Behaviour (and protecting yourself)</h2>
                     <p>
@@ -52,6 +52,15 @@ function Home() {
                         </li>
                     </ul>
                     <h3>Rabies</h3>
+                    <ul>
+                        <li>Rabies is a viral infection of the central nervous system that can affect all mammals. It is fatal once
+                            clinical signs appear.
+                        </li>
+                        <li>Clinical signs may include restlessness, anorexia, difficulty swallowing, vomiting, or diarrhea</li>
+                        <li>After clinical signs appear, infected creatures may have problems with balance, aggression, salivating
+                            poor coordination, and self-mutilation.
+                        </li>
+                    </ul>
                     <h3>Canine Distemper (CDV)</h3>
                     <ul>
                         <li>Canine distemper is a virus that is present in the raccoon population at low levels. As the name suggests,
@@ -59,11 +68,15 @@ function Home() {
                         </li>
                         <li>Raccoons with distemper may approach people, or curl up to sleep in open areas in close proximity to people. 
                             They generally act disoriented or lethargic, but can become aggressive if cornered. They may have seizures.
+                            Symptoms of CDV appear similar to rabies. Exercise caution.
                         </li>
                     </ul>
+                    <p>
+                        Please seek immediate medical attention if you are bitten or scratched by a raccoon (or any wild animal).
+                    </p>
                 </div>
             </section>
-            <section className="sectionContainer issue">
+            <section className="sectionContainer issue bg-green-100">
                 <div className="wrapper">
                     <h2 className="sectionTitle">Got an issue?</h2>
                     <p>If it's a bug, report it on the <a href="https://www.github.com/krakenattacken/raccoon-recon/issues" target="_blank" rel="noopener noreferrer">Github page</a>.</p>
