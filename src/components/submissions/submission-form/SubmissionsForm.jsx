@@ -86,10 +86,10 @@ const SubmissionForm = () => {
             onChange={(value) => updateFormData("time", value)}
           />
           <CheckboxButtons
-            groupName="What was the raccoon's behaviour like?"
+            groupName="What behaviour did you observe?"
             options={[
               ["aggressive", "Aggressive (e.g., growling, hissing, showing teeth)"],
-              ["playful", "Playful (e.g. running around)"],
+              ["moving", "Movement (e.g. running around)"],
               ["foraging", "Foraging (e.g. digging through trash, searching for food)"],
               ["resting", "Resting (e.g. sitting, lying down)"]
             ]}

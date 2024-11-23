@@ -7,13 +7,13 @@ import { getDatabase } from "firebase/database";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBVhUjofI83eLqTalu5sSs2GR6gw8adJ7M",
-  authDomain: "raccoon-recon.firebaseapp.com",
+  apiKey: import.meta.env.FIREBASE_API_KEY,
+  authDomain: import.meta.env.FIREBASE_AUTH_DOMAIN,
   projectId: "raccoon-recon",
-  storageBucket: "raccoon-recon.firebasestorage.app",
-  messagingSenderId: "813839179989",
-  appId: "1:813839179989:web:c7ed13732df432f0ec825c",
-  measurementId: "G-Z3JDXL8J8T"
+  storageBucket: import.meta.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.FIREBASE_SENDER_ID,
+  appId: import.meta.env.FIREBASE_APP_ID,
+  measurementId: import.meta.env.FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase

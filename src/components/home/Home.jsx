@@ -86,12 +86,6 @@ function Home() {
                         <li>
                             <a href="https://www.toronto.ca/home/311-toronto-at-your-service/submit-a-service-request-or-feedback/" target="_blank" rel="noopener noreferrer">Toronto 311 service requests</a>.
                         </li>
-                        <li>
-                            <a href="https://www.toronto.ca/home/311-toronto-at-your-service/submit-a-service-request-or-feedback/" target="_blank" rel="noopener noreferrer">Toronto 311 service requests</a>.
-                        </li>
-                        <li>
-                            <a href="https://www.toronto.ca/home/311-toronto-at-your-service/submit-a-service-request-or-feedback/" target="_blank" rel="noopener noreferrer">Toronto 311 service requests</a>.
-                        </li>
                     </ul>
                 </div>
             </section>
