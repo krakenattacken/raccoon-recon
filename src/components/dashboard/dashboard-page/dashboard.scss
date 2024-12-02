@@ -1,0 +1,14 @@
+@import '../../../styles/variables.scss';
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media (max-width: $full-width-wrapper) {
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+    }
+}

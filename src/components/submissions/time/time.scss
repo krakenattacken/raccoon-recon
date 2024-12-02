@@ -7,5 +7,8 @@ input[type="datetime-local"] {
     border: solid 3px $colour-primary-700;
     border-radius: 15px;
     background-color: $colour-grey-100;
+}
+
+.submission-time {
     margin: 1rem .5rem;
 }

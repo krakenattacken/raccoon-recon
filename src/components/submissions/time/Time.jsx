@@ -22,6 +22,7 @@ const Time = ({ value, onChange}) => {
                 value={value || ""}
                 onChange={handleChange}
                 max={timeRestriction}
+                className="submission-time"
             />
         </div>
     )

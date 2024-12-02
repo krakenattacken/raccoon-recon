@@ -1,0 +1,31 @@
+@import '../../../styles/variables.scss';
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: .25rem;
+    overflow-y: auto;
+
+    @media (max-width: $full-width-wrapper) {
+        overflow-y: auto;
+        height: 400px;
+        width: 100%;
+    }
+}
+
+.tab-button {
+    width: 50%;
+}
+
+.filter-container {
+    width: 100%;
+    margin-top: .3rem;
+}
+
+.graph-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+

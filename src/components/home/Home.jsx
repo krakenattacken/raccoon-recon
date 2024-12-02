@@ -19,7 +19,7 @@ function Home() {
                         <button type="button">VIEW THE DASHBOARD</button>                
                     </Link>
                 </div>
-                <img className="heroImage" src="images/landing_hero.png"/>
+                <img className="heroImage" src="/raccoon-recon/images/landing_hero.png"/>
             </section>
             <section className="sectionContainer about bg-green-300">
                 <div className="wrapper">

@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/header/Navbar';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
-import Dashboard from './components/dashboard/Dashboard'
+import Dashboard from './components/dashboard/dashboard-page/Dashboard'
 import SubmissionForm from './components/submissions/submission-form/SubmissionsForm';
 import 'leaflet/dist/leaflet.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/raccoon-recon'>
       <div className='pageContainer'>
         <Navbar />
         <main>
